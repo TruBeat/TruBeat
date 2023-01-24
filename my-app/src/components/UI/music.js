@@ -1,51 +1,35 @@
 import React, { Component } from "react";
-import styles from "./music.css";
+import "./music.css";
 import song from "../audio/1.mp3";
 
 class App extends Component {
-  // Create state
   state = {
-
-    // Get audio file in a variable
     audio: new Audio(song),
-
-    // Set initial state of song
     isPlaying: false,
   };
-
-  // Main function to handle both play and pause operations
+    
   playPause = () => {
-
-    // Get state of song
     let isPlaying = this.state.isPlaying;
 
     if (isPlaying) {
-      // Pause the song if it is playing
       this.state.audio.pause();
     } else {
-
-      // Play the song if it is paused
       this.state.audio.play();
     }
-
-    // Change the state of song
     this.setState({ isPlaying: !isPlaying });
   };
 
   render() {
     return (
       <div>
-        {/* Show state of song on website */}
-        <p>
-          {this.state.isPlaying ? 
-            "Song is Playing" : 
-            "Song is Paused"}
-        </p>
-
-        {/* Button to call our main function */}
-        <button onClick={this.playPause}>
+        <h1 className="app-name"> TruBeat </h1>
+        <button className="Button" onClick={this.playPause} id="play-icon">
           Play | Pause
         </button>
+        
+        <p className="Status">
+          { this.state.isPlaying ? "Playing..." : "Paused" }
+        </p>
       </div>
     );
   }
