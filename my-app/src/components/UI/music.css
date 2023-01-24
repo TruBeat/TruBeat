@@ -1,5 +1,9 @@
 .container {
-    background-color: black;     
+    background-color: black;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .Button {
@@ -11,21 +15,67 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 50%;
 }
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
 
 .Status {
     background-color: goldenrod; /* Green */
     border: 1px solid #4CAF50;
     color: white;
-    padding: 10px 12px;
+    padding: 10px 1px;
+    flex-grow: 1;
+    width: 100%;
     text-align: center;
     border-radius: 5px;
     text-decoration: double;
 }
 
-.app-name{
-    text-shadow: 10px;
-    shape-margin: 10px;
+.slidecontainer {
+  width: 100%;
+      display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+.slider {
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
 
