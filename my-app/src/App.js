@@ -1,15 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Music from './components/UI/music';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi, Welcome in my world...
-        </p>
-      </header>
+    <div className='App'>
+      <Music />
     </div>
   );
 }
